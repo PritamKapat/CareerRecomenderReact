@@ -9,7 +9,7 @@ const SavedList = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://127.0.0.1:5000/saved-careers", {
+      .get("https://flaskforcareerwiz-2.onrender.com/saved-careers", {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then((res) => {
@@ -23,7 +23,7 @@ const SavedList = () => {
   const handleDelete = (careerId) => {
     const token = localStorage.getItem("token");
     axios
-      .delete(`http://127.0.0.1:5000/saved-careers/${careerId}`, {
+      .delete(`https://flaskforcareerwiz-2.onrender.com/saved-careers/${careerId}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(() => {
