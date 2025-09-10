@@ -18,7 +18,7 @@ const Profile = () => {
       }
 
       try {
-        const response = await fetch('http://localhost:5000/me', {
+        const response = await fetch('https://flaskforcareerwiz-2.onrender.com/me', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
