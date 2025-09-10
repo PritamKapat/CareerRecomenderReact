@@ -15,7 +15,7 @@ const PredictionPage = () => {
       setLoading(true);
       setError(null);
 
-      const response = await fetch("http://127.0.0.1:5000/predict", {
+      const response = await fetch("https://flaskforcareerwiz-2.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ binary_array: binaryFeatures }),
@@ -62,7 +62,7 @@ const PredictionPage = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await axios.get("http://127.0.0.1:5000/saved-careers", {
+      const res = await axios.get("https://flaskforcareerwiz-2.onrender.com/saved-careers", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
